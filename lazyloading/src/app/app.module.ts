@@ -22,6 +22,8 @@ export class AppComponent {}
       <div><a routerLink="/angular_b">Go to Angular B</a></div>
       <div><a routerLink="/lazy1/angularjs_a">Go to AngularJS A</a></div>
       <div><a routerLink="/lazy1/angularjs_b">Go to AngularJS B</a></div>
+      <div><a routerLink="/lazy2/angularjs_c">Go to AngularJS C</a></div>
+      <div><a routerLink="/lazy2/angularjs_d">Go to AngularJS D</a></div>
     </div>
   `
 })
@@ -36,6 +38,8 @@ export class AngularAComponent {
       <div>Go to Angular B</div>
       <div><a routerLink="/lazy1/angularjs_a">Go to AngularJS A</a></div>
       <div><a routerLink="/lazy1/angularjs_b">Go to AngularJS B</a></div>
+      <div><a routerLink="/lazy2/angularjs_c">Go to AngularJS C</a></div>
+      <div><a routerLink="/lazy2/angularjs_d">Go to AngularJS D</a></div>
     </div>
   `
 })
@@ -54,7 +58,8 @@ export class AngularBComponent {
       {path: '', redirectTo: 'angular_a', pathMatch: 'full'},
       {path: 'angular_a', component: AngularAComponent},
       {path: 'angular_b', component: AngularBComponent},
-      {path: 'lazy1', loadChildren: './js1/angularjs.module#AngularJSModule'}
+      {path: 'lazy1', loadChildren: './js1/angularjs.module#AngularJSModule'},
+      {path: 'lazy2', loadChildren: './js2/angularjs.module#AngularJS2Module'}
     ], {
       enableTracing: true,
       // Uncomment to enable preloading and prebootstrapping
